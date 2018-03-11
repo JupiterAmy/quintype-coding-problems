@@ -53,3 +53,18 @@ You may also choose to try some of the bonus parts of this problem:
 4. (Javascript) - Cover logic in your application with meaningful tests
 5. (Infra) - Get hot reloading working
 6. (Infra) - Get asset pipelining and minification working
+
+
+Solution:
+
+The solution has been designed with the online CDN's. So any specific library doesn't needs to be added.
+
+The approach to the solution is as follows...
+
+* A function generates eight unique random numbers which are considered as the hidden diamonds(positions on the grid.)
+
+* When user clikcs on the grid the diamond containing grid's position is compared with the clicked grid. If it matches the user sees a diamond.
+
+* At any point of time, user can choose to save the current state of the game and can load at a later point of time by using 'save progress' and 'load saved' buttons.
+
+* When 8 diamonds have been found, the user gets a final score which is the number of unturned cells.
