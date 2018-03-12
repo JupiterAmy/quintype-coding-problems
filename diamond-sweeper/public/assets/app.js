@@ -125,7 +125,7 @@ $('document').ready(function() {
 
 	/* Click handler for all the cells a user clicks to find a diamond*/
 	function cellClicked() {
-		$('.cell.unknown').click(function() {
+		$('.cell.unknown').on('click', function() {
 			$(this).off("click");
 			numOfTries = numOfTries + 1;
 			console.log("try: " + numOfTries);
@@ -170,18 +170,21 @@ $('document').ready(function() {
 	 }
 
 	/* This is a click handler to save the game state*/ 
-	$('#saveProgress').click(function() {
+	$('#saveProgress').on('click', function() {
+		console.log("Inside save");
 		$saved = $('#board-grids').clone();
 		saveTries = numOfTries;
 		saveDiamond = diamondsFound;
 	});
 
 	/* This is a click handler to load the saved state*/ 
-	$('#loadSaved').click(function() {
+	$('#loadSaved').on('click', function() {
+		console.log("inside load saved");
 		$('#board-grids').remove();
 		$('#Game-Board').prepend($saved);
 		numOfTries = saveTries;
 		diamondsFound = saveDiamond;
+		$saved = null;
 		cellClicked();
 	});
 
