@@ -59,6 +59,8 @@ Solution:
 
 The solution has been designed with the online CDN's. So any specific library doesn't needs to be added.
 
+This solution's UI has been transformed using Bootstrap 4, so it doesn't support IE. It's best viewed in Chrome.
+
 The approach to the solution is as follows...
 
 * A function generates eight unique random numbers which are considered as the hidden diamonds(positions on the grid.)
